@@ -396,6 +396,56 @@ public class Application {
 //        System.out.println(customer.getMetadata());
 
 
+        // Idempotency
+
+        /**
+         * COMMANDS
+         *
+         * 1. For opening (forwarding) on the port 4242
+         * stripe listen --forward-to=localhost:4242/webhook
+         *
+         * 2. For making requests
+         * stripe trigger customer.created
+         *
+         * 3. For getting the logs in the cmd
+         * stripe logs tail
+         */
+
+//        Map<String, Object> params = new HashMap<>();
+//        params.put(
+//                "email", "foo@bar.com"
+//        );
+//
+//        RequestOptions requestOptions =
+//                new RequestOptions.RequestOptionsBuilder()
+//                        .setIdempotencyKey("a-long-random-string-23246543")
+//                        .build();
+//
+//        // I can run this multiple time,
+//        // but because of the idempotency key, the customer won't be created for more than one time
+//        Customer customer = Customer.create(params, requestOptions);
+
+
+        // We can also the IdempotencyKey to be a UUID
+        // UUID uuid = UUID.randomUUID();
+
+        // RETRIES
+
+        // 1. Add the max number of retries in the configs
+//        Stripe.setMaxNetworkRetries(2);
+//
+//        Map<String, Object> params = new HashMap<>();
+//        params.put("email", "foo@bar.com");
+//
+//        Customer customer = Customer.create(params);
+
+
+        // ENVIRONMENT VARIABLE
+
+        // 1. Add a new dependency
+
+
+
 
 
 
