@@ -3,6 +3,7 @@ package org.example;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.*;
+import com.stripe.model.tax.Registration;
 import com.stripe.net.RequestOptions;
 import com.stripe.param.*;
 import io.github.cdimascio.dotenv.Dotenv;
@@ -85,11 +86,18 @@ public class Application {
 
     public static void main(String[] args) throws StripeException {
 
-        final String API_KEY = System.getenv("STRIPE_API_KEY");
+        // ENVIRONMENT VARIABLE
 
-        assert API_KEY != null : "API_KEY SHOULD NOT BE NULL";
+        // 1. Add a new dependency
 
-        Stripe.apiKey = API_KEY;
+        Dotenv dotenv = Dotenv.load();
+
+//        System.out.println("Secret");
+//        System.out.println(dotenv.get("STRIPE_SECRET"));
+
+        Stripe.apiKey = dotenv.get("STRIPE_SECRET");
+        // The info is merged from the .env file
+
 
         // Globally
         // Stripe.apiKey=API_KEY;
@@ -440,15 +448,17 @@ public class Application {
 //
 //        Customer customer = Customer.create(params);
 
+        // Just testing the .env file
+//        CustomerListParams params = CustomerListParams.builder().build();
+//        Iterable<Customer> itCustomers = Customer.list(params).autoPagingIterable();
+//
+//        for (Customer customer : itCustomers) {
+//            System.out.println(customer.getEmail());
+//        }
 
-        // ENVIRONMENT VARIABLE
 
-        // 1. Add a new dependency
 
-        Dotenv dotenv = Dotenv.load();
 
-        System.out.println("Secret");
-        System.out.println(dotenv.get( ));
 
 
 
