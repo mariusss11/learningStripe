@@ -351,6 +351,7 @@ public class Application {
 
         // METADATA
 
+        // Adding metadata to an Customer
 //        CustomerCreateParams params=
 //                CustomerCreateParams.builder()
 //                        .setName("Jenny Rosen")
@@ -360,8 +361,40 @@ public class Application {
 //        Customer customer = Customer.create(params);
 //        System.out.println(customer);
 
-        Customer retrivedCustomer = Customer.retrieve("cus_RyYy6mFdEG7h4D");
-        System.out.println(retrivedCustomer.getMetadata());
+        // Adding new value to the metadata
+//        CustomerUpdateParams params =
+//                CustomerUpdateParams.builder()
+//                        .putMetadata("favorite_animal","cheetah")
+//                        .build();
+//
+//        Customer customer = Customer.retrieve("cus_RyYy6mFdEG7h4D");
+//        System.out.println(customer.getMetadata());
+//        customer = customer.update(params);
+//        System.out.println(customer.getMetadata());
+
+        // Update one value in the metadata info
+//        CustomerUpdateParams params =
+//                CustomerUpdateParams.builder()
+//                        .putMetadata("favorite_animal","dog")
+//                        .build();
+//
+//        Customer customer = Customer.retrieve("cus_RyYy6mFdEG7h4D");
+//        System.out.println(customer.getMetadata());
+//        customer = customer.update(params);
+//        System.out.println(customer.getMetadata());
+
+        // Delete some key values from the metadata
+//        CustomerUpdateParams params =
+//                CustomerUpdateParams.builder()
+//                        .putMetadata("favorite_animal","")
+//                        .putMetadata("my_app_id","")
+//                        .build();
+//
+//        Customer customer = Customer.retrieve("cus_RyYy6mFdEG7h4D");
+//        System.out.println(customer.getMetadata());
+//        customer = customer.update(params);
+//        System.out.println(customer.getMetadata());
+
 
 
 
