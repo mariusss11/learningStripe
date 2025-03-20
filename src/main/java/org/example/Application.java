@@ -5,6 +5,7 @@ import com.stripe.exception.StripeException;
 import com.stripe.model.*;
 import com.stripe.net.RequestOptions;
 import com.stripe.param.*;
+import io.github.cdimascio.dotenv.Dotenv;
 import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 
@@ -443,6 +444,11 @@ public class Application {
         // ENVIRONMENT VARIABLE
 
         // 1. Add a new dependency
+
+        Dotenv dotenv = Dotenv.load();
+
+        System.out.println("Secret");
+        System.out.println(dotenv.get( ));
 
 
 
