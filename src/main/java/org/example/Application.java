@@ -256,7 +256,7 @@ public class Application {
 //        CustomerListParams params =
 //                CustomerListParams.builder()
 //                        .setEmail("jenny.rosen@example.com")
-//                        .build();
+//                            .build();
 //        // API ENDPOINT -> v1/customers?email=jenny.rosen@example.com
 //        CustomerCollection customers =
 //                Customer.list(params);
@@ -458,6 +458,27 @@ public class Application {
 
 
 
+
+//        CustomerSessionCreateParams params =
+//                CustomerSessionCreateParams.builder()
+//                        .setCustomer("cus_S081x9BuYGAZmM")
+//                        .setComponents(
+//                                CustomerSessionCreateParams.Components.builder()
+//                                        .setPricingTable(
+//                                                CustomerSessionCreateParams.Components.PricingTable.builder()
+//                                                        .setEnabled(true)
+//                                                        .build()
+//                                        )
+//                                        .build()
+//                        )
+//                        .build();
+//        CustomerSession customerSession = CustomerSession.create(params);
+//        System.out.println(customerSession);
+
+
+
+        Customer customer = Customer.retrieve("cus_S081x9BuYGAZmM");
+        System.out.println(customer);
 
 
 
